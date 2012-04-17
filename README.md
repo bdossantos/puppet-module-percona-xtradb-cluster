@@ -10,6 +10,7 @@ Under (heavy) development :)
 * [Percona XtraDB Cluster's documentation](http://www.percona.com/doc/percona-xtradb-cluster/index.html)
 * [Installing Percona XtraDB Cluster from Binaries](http://www.percona.com/doc/percona-xtradb-cluster/installation.html)
 * [Load balancing with HAProxy](http://www.percona.com/doc/percona-xtradb-cluster/haproxy.html)
+* @lefred : [Percona XtraDB Cluster test w/ Vagrant](https://github.com/lefred/percona-cluster)
 
 ## TODO :
 
