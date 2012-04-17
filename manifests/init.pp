@@ -4,7 +4,7 @@ class percona_xtradb_cluster(
     $gpg_export = 'CD2EFD2A',
     $repository = 'http://repo.percona.com/apt'
     ) {
-    
+
     include percona_xtradb_cluster::packages,
             percona_xtradb_cluster::configure,
             percona_xtradb_cluster::service
