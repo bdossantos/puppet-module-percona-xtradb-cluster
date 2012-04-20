@@ -4,7 +4,8 @@ class percona_xtradb_cluster(
     $gpg_export = 'CD2EFD2A',
     $repository = 'http://repo.percona.com/apt',
     $mysql_serverid = 1,
-    $joinip = ''
+    $joinip = '',
+    cluster_name = 'my_cluster'
     ) {
 
     include percona_xtradb_cluster::packages,
