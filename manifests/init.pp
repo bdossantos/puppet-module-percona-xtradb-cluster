@@ -5,7 +5,7 @@ class percona_xtradb_cluster(
     $repository = 'http://repo.percona.com/apt',
     $mysql_serverid = 1,
     $joinip = '',
-    cluster_name = 'my_cluster'
+    $cluster_name = 'my_cluster'
     ) {
 
     include percona_xtradb_cluster::packages,
