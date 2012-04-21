@@ -24,6 +24,8 @@ Vagrant::Config.run do |config|
   config.vm.define :percona1 do |percona1_config|
     percona1_config.vm.host_name = "percona1"
     percona1_config.vm.network :hostonly, "192.168.33.10"
+    # Forward guest port 3306 to host port 33060
+    percona1_config.vm.forward_port 3306, 33060
   end
 
   # Percona2
