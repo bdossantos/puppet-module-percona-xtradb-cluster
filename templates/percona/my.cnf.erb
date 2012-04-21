@@ -10,7 +10,7 @@ datadir                         = /var/lib/mysql
 user                            = mysql
 log_error                       = /var/log/mysql/error.log
 
-thread_concurrency              = <%= processorcount * 2 %>
+thread_concurrency              = <%= thread_concurrency %>
 
 relay-log                       = /var/lib/mysql/<%= hostname %>-A-relay.log
 relay-log-index                 = /var/lib/mysql/<%= hostname %>-relay.index

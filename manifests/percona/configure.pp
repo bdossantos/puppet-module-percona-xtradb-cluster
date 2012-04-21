@@ -1,5 +1,7 @@
 class percona_xtradb_cluster::percona::configure {
 
+    $thread_concurrency  = $::processorcount * 2
+    
     file {
         '/etc/my.cnf':
         ensure  => present,
