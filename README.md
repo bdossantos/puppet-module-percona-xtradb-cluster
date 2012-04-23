@@ -17,6 +17,5 @@ Under (heavy) development :)
 * Manage MySQL :
     * Configuration
     * Users + Rights
-* Cluster Configuration
 * Galera Load Blancer / HaProxy ?
 * Tests w/ rspec-puppet
