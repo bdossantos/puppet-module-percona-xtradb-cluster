@@ -1,7 +1,6 @@
 class percona_xtradb_cluster::repository::packages {
 
-    package {
-        'gpgv':
-        ensure => 'installed';
-    }
+  package { 'gpgv':
+    ensure => 'installed';
+  }
 }
