@@ -5,20 +5,20 @@ default-character-set           = UTF8
 
 [mysqld]
 
-bind-address                    = <%= ipaddress_eth1 %>
+bind-address                    = <%= @ipaddress_eth1 %>
 datadir                         = /var/lib/mysql
 user                            = mysql
 log_error                       = /var/log/mysql/error.log
 
-thread_concurrency              = <%= thread_concurrency %>
+thread_concurrency              = <%= @thread_concurrency %>
 
-relay-log                       = /var/lib/mysql/<%= hostname %>-A-relay.log
-relay-log-index                 = /var/lib/mysql/<%= hostname %>-relay.index
-relay-log-info-file             = /var/lib/mysql/<%= hostname %>-relay.info
+relay-log                       = /var/lib/mysql/<%= @hostname %>-A-relay.log
+relay-log-index                 = /var/lib/mysql/<%= @hostname %>-relay.index
+relay-log-info-file             = /var/lib/mysql/<%= @hostname %>-relay.info
 
-server-id                       = <%= mysql_serverid %>
-log-bin                         = /var/lib/mysql/<%= hostname %>-bin.log
-log-bin-index                   = /var/lib/mysql/<%= hostname %>-bin.index
+server-id                       = <%= @mysql_serverid %>
+log-bin                         = /var/lib/mysql/<%= @hostname %>-bin.log
+log-bin-index                   = /var/lib/mysql/<%= @hostname %>-bin.index
 
 slave_compressed_protocol       = 1
 
@@ -29,20 +29,20 @@ default-storage-engine          = InnoDB
 
 binlog_format                   = ROW
 wsrep_provider                  = /usr/lib64/libgalera_smm.so
-wsrep_cluster_address           = gcomm://<%= joinip %>
-wsrep_sst_receive_address       = <%= ipaddress_eth1 %>
-wsrep_node_incoming_address     = <%= ipaddress_eth1 %>
+wsrep_cluster_address           = gcomm://<%= @joinip %>
+wsrep_sst_receive_address       = <%= @ipaddress_eth1 %>
+wsrep_node_incoming_address     = <%= @ipaddress_eth1 %>
 wsrep_slave_threads             = 2
-wsrep_cluster_name              = <%= cluster_name %>
+wsrep_cluster_name              = <%= @cluster_name %>
 wsrep_sst_method                = rsync
-wsrep_node_name                 = <%= hostname %>
+wsrep_node_name                 = <%= @hostname %>
 
 innodb_locks_unsafe_for_binlog  = 1
 innodb_autoinc_lock_mode        = 2
 #innodb_log_file_size            = 64M
 
 [mysql]
-prompt                          = "<%=hostname %> mysql> "
+prompt                          = "<%= @hostname %> mysql> "
 
 [mysqlhotcopy]
 interactive-timeout
