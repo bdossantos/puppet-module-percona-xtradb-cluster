@@ -5,6 +5,15 @@ on Debian.
 
 Under (heavy) development :)
 
+## Install
+
+```
+git clone https://github.com/bdossantos/puppet-module-percona-xtradb-cluster percona-xtradb-cluster
+cd percona-xtradb-cluster
+vagrant up
+vagrant ssh percona1
+```
+
 ## Ressources :
 
 * [Percona XtraDB Cluster's documentation](http://www.percona.com/doc/percona-xtradb-cluster/index.html)
